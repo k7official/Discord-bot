@@ -27,9 +27,28 @@ class MyClient(discord.Client):
       role = discord.utils.get(guild.roles, name = 'Rocket launcher')
       await payload.member.add_roles(role)
       
+  async def on_raw_reaction_remove(self, payload):
+    '''
+    Remove a role based on reaction emoji
+    '''
+    if payload.message_id != self.target_message_id:
+      return
+
+    guild = client.get_guild(payload.guild_id)
+    member = guild.get_member(payload.user_id)
+
+    if payload.emoji.name == '💯':
+      role = discord.utils.get(guild.roles, name =         'Top class')
+      await member.remove_roles(role)
+    elif payload.emoji.name == '🔥':
+      role = discord.utils.get(guild.roles, name = 'Fire cracker')
+      await member.remove_roles(role)
+    elif payload.emoji.name == '🚀':
+      role = discord.utils.get(guild.roles, name = 'Rocket launcher')
+      await member.remove_roles(role)
 
 intents = discord.Intents.default()
 intents.members = True
 
 client = MyClient(intents=intents)
-#client.run(token)
+#client.run('token')
