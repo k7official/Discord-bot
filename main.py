@@ -6,4 +6,4 @@ client = discord.Client()
 async def on_ready():
   print('Bot is now online and ready to roll')
 
-client.run('OTQ4MjM3NDc1MzQ2Nzg0MzU3.Yh449w.DDojUAu3Dua4cnuPavztEco4Fvo')
+client.run('OTQ4NDE3NTUzMTc5NDg0MzAw.Yh7grQ.mi5E8UizTDalF1F4NQcktXwjZLg')
