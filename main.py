@@ -22,3 +22,4 @@ async def on_message(message):
     await message.channel.send('Welcome to K7officialServer')
 
 
+#client.run(token)

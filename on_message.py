@@ -13,4 +13,4 @@ async def on_message(message):
 
   if message.content == 'hello':
     await message.channel.send('Welcome to K7officialServer')
-    
+#client.run(token)
